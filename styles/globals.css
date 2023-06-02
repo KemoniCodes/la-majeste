@@ -46,11 +46,11 @@ html {
 }
 
 .swiper-wrapper {
-  @apply items-end;
+  @apply items-baseline;
 }
 
 .swiper-slide {
-  @apply items-end flex;
+  @apply items-baseline flex;
 }
 
 .swiper-button-prev {
@@ -84,12 +84,6 @@ html {
 .swiper-slide.swiper-slide-next img {
   rotate: 0deg;
   transition: rotate 0.5s ease;
-}
-
-.swiper-slide {
-  padding-left: 5rem;
-  padding-right: 5rem;
-  /* margin: 0 !important; */
 }
 
 .swiper-slide img {
