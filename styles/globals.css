@@ -2,47 +2,97 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
-  font-family: 'PPEditorialNew-Regular';
-  src: url('../public/PPEditorialNew-Regular.otf');
+  font-family: "PPEditorialNew-Regular";
+  src: url("../public/PPEditorialNew-Regular.otf");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew-Regular';
-  src: url('../public/PPEditorialNew-Italic.otf');
+  font-family: "PPEditorialNew-Regular";
+  src: url("../public/PPEditorialNew-Italic.otf");
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew-Ultralight';
-  src: url('../public/PPEditorialNew-Ultralight.otf');
+  font-family: "PPEditorialNew-Ultralight";
+  src: url("../public/PPEditorialNew-Ultralight.otf");
   font-weight: 200;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PPEditorialNew-Ultralight';
-  src: url('../public/PPEditorialNew-UltralightItalic.otf');
+  font-family: "PPEditorialNew-Ultralight";
+  src: url("../public/PPEditorialNew-UltralightItalic.otf");
   font-weight: 200;
   font-style: italic;
 }
-
 
 :root {
   --ruby: #581414;
-  --emerald: #0C3423;
-  --sapphire: #120C34;
-  --textprimary: #1C1C1C;
-  --textsecondary: #F4EBD0;
-  --background: #FFFAED;
-  --EditorialNew: 'PPEditorialNew-Regular';
-  --EditorialNewLight: 'PPEditorialNew-Ultralight';
+  --emerald: #0c3423;
+  --sapphire: #120c34;
+  --textprimary: #1c1c1c;
+  --textsecondary: #f4ebd0;
+  --background: #fffaed;
+  --EditorialNew: "PPEditorialNew-Regular";
+  --EditorialNewLight: "PPEditorialNew-Ultralight";
 }
 
 html {
   @apply bg-background;
+}
+
+.swiper-wrapper {
+  @apply items-end;
+}
+
+.swiper-slide {
+  @apply items-end flex;
+}
+
+.swiper-button-prev {
+  background-image: url("/prev.svg") !important;
+  height: 4% !important;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next::after {
+  display: none;
+}
+
+.swiper-button-next {
+  background-image: url("/prev.svg") !important;
+  rotate: 180deg;
+  height: 4% !important;
+}
+
+.swiper-slide-next .featuredProduct h3 {
+  @apply bg-primary text-secondary  pt-[.3rem] pb-[.1rem] px-[.6rem];
+  transition: color 0.3s ease, background-color 0.2s ease;
+}
+
+.swiper-slide.swiper-slide-active img {
+  rotate: -15deg;
+  transition: rotate 0.5s ease;
+}
+
+.swiper-slide.swiper-slide-next img {
+  rotate: 0deg;
+  transition: rotate 0.5s ease;
+}
+
+.swiper-slide {
+  padding-left: 5rem;
+  padding-right: 5rem;
+  /* margin: 0 !important; */
+}
+
+.swiper-slide img {
+  rotate: 15deg;
+  transition: rotate 0.5s ease;
 }

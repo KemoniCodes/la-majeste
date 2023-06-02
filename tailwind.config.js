@@ -19,6 +19,12 @@ module.exports = {
         "EditorialNew": "var(--EditorialNew)",
         "EditorialLight": "var(--EditorialNewLight)"
       },
+      transitionProperty: {
+        "bgHover":" background-color color 10s ease",
+        // "linkHover": "var(--powderiris) 0.2s ease",
+        // "navLinkHover": "var(--darkcocoa) 0.2s ease",
+        // "imageHover": "opacity 0.2s ease"
+      }
     },
   },
   plugins: [],

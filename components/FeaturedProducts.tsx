@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useCallback, useState } from 'react';
 import Image from "next/image";
 import { FeaturedProductsProps } from "./FeaturedProductsProps"
-import useEmblaCarousel from 'embla-carousel-react'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+
 
 function FeaturedProduct({ productImage, productTitle }: FeaturedProductsProps) {
   return (
-    <div className="featuredProduct min-w-0 items-center flex flex-col flex-[0_0_50%]">
+    <div className="featuredProduct items-center flex flex-col">
       <div className="productImage">
         <Image src={productImage} width={200} height={200} alt="featured-product" className='w-auto' />
       </div>
-      <h3 className="mt-2 productTitle text-[29px] text-primary font-EditorialLight">{productTitle}</h3>
+      <h3 className="mt-4 productTitle text-[29px] text-primary font-EditorialLight">{productTitle}</h3>
     </div>
   )
 }
@@ -27,24 +31,21 @@ const featuredProductData: FeaturedProductsProps[] = [
     productImage: '/serum.svg',
     productTitle: 'The Best Serum'
   },
-  // {
-  //   productImage: '/mask.svg',
-  //   productTitle: 'The Best Mask'
-  // },
-  // {
-  //   productImage: '/toner.svg',
-  //   productTitle: 'The Best Toner'
-  // },
-  // {
-  //   productImage: '/serum.svg',
-  //   productTitle: 'The Best Serum'
-  // },
+  {
+    productImage: '/mask.svg',
+    productTitle: 'The Best Mask'
+  },
+  {
+    productImage: '/toner.svg',
+    productTitle: 'The Best Toner'
+  },
+  {
+    productImage: '/serum.svg',
+    productTitle: 'The Best Serum'
+  },
 ]
 
 export default function FeaturedProducts() {
-  useEmblaCarousel.globalOptions = { loop: true }
-  const [emblaRef] = useEmblaCarousel({ slidesToScroll: 1, align: 0.25, loop: true, inViewThreshold: 0.5, startIndex: 1 })
-
   return (
     <div className="featuredProducts py-16 text-center">
       <h2 className="text-[88px] text-primary font-EditorialLight">
@@ -53,16 +54,20 @@ export default function FeaturedProducts() {
       <p className="font-EditorialLight text-[18px] text-primary -mt-4">
         Our favorite <i>face</i> products.
       </p>
-      <div className="productsCarousel overflow-hidden max-w-[70%] mx-auto mt-20" ref={emblaRef}>
-        <div className="container flex justify-between max-w-[inherit] items-baseline mx-auto">
-          {featuredProductData.map((data, index) => (
+
+      <Swiper navigation={true} modules={[Navigation]}
+        slidesPerView={3}
+        spaceBetween={3}
+        className="w-[85%] my-20">
+        {featuredProductData.map((data, index) => (
+          <SwiperSlide key={index}>
             <FeaturedProduct
               key={index}
               {...data}
             />
-          ))}
-        </div>
-      </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
