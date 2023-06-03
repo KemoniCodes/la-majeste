@@ -90,3 +90,7 @@ html {
   rotate: 15deg;
   transition: rotate 0.5s ease;
 }
+
+footer ul {
+  @apply list-none
+}
