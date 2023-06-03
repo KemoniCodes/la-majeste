@@ -110,3 +110,7 @@ html {
     transition: rotate 0.5s ease;
   }
 }
+
+.marquee img {
+  @apply max-w-none;
+}
