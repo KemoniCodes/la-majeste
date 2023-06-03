@@ -55,7 +55,7 @@ export default function FeaturedProducts() {
         Our favorite <i>face</i> products.
       </p>
 
-      <Swiper navigation={true} modules={[Navigation]}
+      <Swiper loop={true} navigation={true} modules={[Navigation]}
         slidesPerView={3}
         spaceBetween={3}
         className="w-[85%] my-20">
