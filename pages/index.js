@@ -3,6 +3,7 @@ import FeaturedProducts from "@/components/FeaturedProducts"
 import Marquee from "@/components/Marquee"
 import Callout from "@/components/Callout"
 import Newsletter from "@/components/Newsletter"
+import Footer from "@/components/Layout/Footer"
 
 
 export default function Home() {
@@ -12,7 +13,8 @@ export default function Home() {
             <FeaturedProducts />
             <Marquee />
             <Callout />
-            <Newsletter/>
+            <Newsletter />
+            <Footer />
         </>
     )
 }

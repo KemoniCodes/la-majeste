@@ -4,7 +4,7 @@ import Arrow from "@/public/prev.svg";
 export default function Newsletter() {
   return (
     <>
-      <div className="newsletter text-center pt-40 pb-20">
+      <div className="newsletter text-center pt-40 pb-24">
         <p className="text-[18px] text-primary font-EditorialNew">
           New products, exclusive offers + more
         </p>
