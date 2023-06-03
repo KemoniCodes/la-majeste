@@ -96,3 +96,22 @@ html {
   rotate: 15deg;
   transition: rotate 0.5s ease;
 }
+
+.marquee {
+  width: 100%;
+/* line-height: 50px; */
+/* background-color: red; */
+/* color: white; */
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.marquee ul {
+  /* display: inline-block; */
+  /* padding-left: 20%; */
+  /* animation: marquee 8s linear infinite; */
+}
+@keyframes marquee {
+  0%   { transform: translate(0, 100); }
+  100% { transform: translate(-100%, 0); }
+}

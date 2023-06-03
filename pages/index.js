@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero"
 import FeaturedProducts from "@/components/FeaturedProducts"
+import Marquee from "@/components/Marquee"
 
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
         <>
             <Hero />
             <FeaturedProducts />
+            <Marquee />
         </>
     )
 }
