@@ -91,6 +91,22 @@ html {
   transition: rotate 0.5s ease;
 }
 
-footer ul {
-  @apply list-none
+.swiper-slide {
+  /* @apply !mr-12; */
+}
+
+@media screen and (max-width: 414px) {
+  .swiper-slide.swiper-slide-active img {
+    rotate: 0deg;
+  }
+
+  .swiper-slide.swiper-slide-active h3 {
+    @apply bg-primary text-secondary  pt-[.3rem] pb-[.1rem] px-[.6rem];
+    transition: color 0.3s ease, background-color 0.2s ease;
+  }
+
+  .swiper-slide.swiper-slide-next img {
+    rotate: -15deg;
+    transition: rotate 0.5s ease;
+  }
 }

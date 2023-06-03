@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Marquee() {
   return (
     <>
-      <div className="marquee bg-sapphire">
+      <div className="marquee bg-sapphire overflow-hidden">
         <ul className="flex justify-between py-4">
           <li className="items-center text-[29px] text-secondary font-EditorialLight italic uppercase flex">
             Cleanse

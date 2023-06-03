@@ -48,17 +48,24 @@ const featuredProductData: FeaturedProductsProps[] = [
 export default function FeaturedProducts() {
   return (
     <div className="featuredProducts py-16 text-center">
-      <h2 className="text-[88px] text-primary font-EditorialLight">
+      <h2 className="text-[88px] text-primary font-EditorialLight lg:leading-[inherit] leading-[5.5rem]">
         The <i>Best</i> Face
       </h2>
-      <p className="font-EditorialLight text-[18px] text-primary -mt-4">
+      <p className="font-EditorialLight text-[18px] text-primary lg:-mt-4 -mt-0">
         Our favorite <i>face</i> products.
       </p>
 
-      <Swiper loop={true} navigation={true} modules={[Navigation]}
+      <Swiper loop={false} navigation={true} modules={[Navigation]}
         slidesPerView={3}
-        spaceBetween={3}
-        className="w-[85%] my-20">
+        // spaceBetween={3}
+        breakpoints={{
+          375: {
+            width: 375,
+            slidesPerView: 1,
+            loop: true
+          }
+        }}
+        className="w-[79%] lg:mt-20 lg:mb-20 mt-16">
         {featuredProductData.map((data, index) => (
           <SwiperSlide key={index}>
             <FeaturedProduct

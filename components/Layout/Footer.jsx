@@ -7,8 +7,8 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <div className="footer flex px-20 pt-12 pb-4 mx-20 border-t-[1px] border-solid border-primary">
-          <div className="logo w-[60%]">
+        <div className="footer lg:flex block lg:px-20 px-0 pt-12 pb-8 mx-20 border-t-[1px] border-solid border-primary">
+          <div className="logo lg:w-[60%] w-full lg:pb-0 pb-8">
             <Image
               src={Secondary}
               width={250}
@@ -16,7 +16,7 @@ export default function Footer() {
               alt="seoncdary logo"
             />
           </div>
-          <div className="info flex gap-20">
+          <div className="info flex lg:gap-20 gap-8">
             <ul className="">
               <li className="text-start text-[18px] text-primary font-EditorialNew"> Socials</li>
               <li className="text-start text-[18px] text-primary font-EditorialLight">Instagram</li>
