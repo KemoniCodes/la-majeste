@@ -9,7 +9,7 @@ import { Navigation } from "swiper";
 
 function FeaturedProduct({ productImage, productTitle }: FeaturedProductsProps) {
   return (
-    <div className="featuredProduct items-center flex flex-col lg:-ml-0 -ml-8">
+    <div className="featuredProduct items-center flex flex-col lg:-ml-0 -ml-[3.3rem]">
       <div className="productImage">
         <Image src={productImage} width={200} height={200} alt="featured-product" className='w-auto' />
       </div>
